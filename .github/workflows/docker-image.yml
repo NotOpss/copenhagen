@@ -26,6 +26,8 @@ jobs:
       uses: anchore/scan-action@v2
       with:
         path: "."
+        fail-build: true
+        severity-cutoff: critical
    # - name: Scan image
    #   uses: anchore/scan-action@v2
    #   with:
