@@ -25,4 +25,4 @@ jobs:
     - name: Scan image
       uses: anchore/scan-action@v2
       with:
-         image: ghcr.io/notopss/copenhagen:${{ BUILD_NUMBER }}
+         image: ghcr.io/notopss/copenhagen:latest
