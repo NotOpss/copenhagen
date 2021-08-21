@@ -15,4 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
+      env:
+       MY_PAT: ${{ secrets.MY_PAT }}
       run: ./run.sh
