@@ -1,9 +1,7 @@
 docker build -t test .
 
-docker tag test ghcr.io/notopss/copenhagen:latest
-
-echo "Build number is $BUILD_NUMBER"
+docker tag test ghcr.io/notopss/copenhagen:$BUILD_NUMBER
 
 echo $MY_PAT | docker login ghcr.io -u macbash --password-stdin
 
-docker push ghcr.io/notopss/copenhagen:latest
+docker push ghcr.io/notopss/copenhagen:$BUILD_NUMBER
